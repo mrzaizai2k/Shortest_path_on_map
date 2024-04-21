@@ -51,7 +51,7 @@ def get_graph(address_orig: str, address_dest: str) -> (MultiDiGraph, Tuple[floa
     location_orig = get_location_from_address(address_orig)
     location_dest = get_location_from_address(address_dest)
 
-    G = ox.graph_from_xml("./mapHCM.osm")
+    G = ox.graph_from_xml("./data/mapHCM.osm")
 
     return G,  location_orig, location_dest
 
@@ -109,5 +109,9 @@ def find_shortest_path(graph: MultiDiGraph,
 
     node_orig = ox.nearest_nodes(graph, location_orig[1],location_orig[0])
     node_dest = ox.nearest_nodes(graph, location_dest[1],location_dest[0])
-    route = nx.shortest_path(graph, node_orig, node_dest, weight='length', method=optimizer.lower())
+    if optimizer in ['Dijkstra', 'Bellman-Ford']:
+        route = nx.shortest_path(graph, node_orig, node_dest, weight='length', method=optimizer.lower())
+    elif optimizer == "Floyd Warshall":
+        predecessors, _ = nx.floyd_warshall_predecessor_and_distance(graph)
+        route = nx.reconstruct_path(node_orig, node_dest, predecessors)
     return route

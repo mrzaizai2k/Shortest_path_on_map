@@ -163,3 +163,4 @@ venv/
 cache/
 data/
 input_data/
+*.osm
