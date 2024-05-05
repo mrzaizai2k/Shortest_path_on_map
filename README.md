@@ -32,9 +32,10 @@ Library:
 - folium==0.16.0
 
 To setup lib, run command
-   python -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
+
+    python -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
 
 
 First we need to create a map with osm. 
@@ -48,8 +49,33 @@ Here I have data with 380 nodes and 810 edges in Ho Chi Minh city.
 # How to run code
 
 Move to the folder having the project and run command
-  streamlit run app.py
+
+    streamlit run app.py
 
 It will open the streamlit web app
+
+![Result](docs/result b.jpg)
+
+To change basemap click choose basemap. Options inculde:
+- Satellite
+- Roadmap
+- Terrain
+- Hybrid
+- OpenStreetMap
+
+To change travel mode, click choose transport. Options include:
+- Drive
+- Walk
+- Bike
+
+Click choose algorithm to change algorithms. Options include
+- Dijkstra
+- Bellman-Ford
+- Floyd Warshall
+
+Then we click on the map, it will appear the lat, lon of the position, copy and paste the lat, lon to Go from and Go to section
+
+
+
 
 
