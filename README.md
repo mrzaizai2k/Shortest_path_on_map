@@ -17,3 +17,39 @@ https://towardsdatascience.com/find-and-plot-your-optimal-path-using-plotly-and-
 https://github.com/gboeing/osmnx-examples/tree/main/notebooks
 
 https://github.com/vraj152/googlemapsastar?fbclid=IwAR1iBcZcaQtAJ4I0VzrCECIILYlb1XqxhykNkMmY26-0RJpdj1GwT0NepVE
+
+# Setup
+
+Python: 3.10.12
+OS: wsl2 (window)
+Library: 
+- streamlit==1.33.0
+- streamlit_folium 
+- leafmap==0.31.9
+- osmnx==1.9.2
+- networkx==3.1
+- geopy==2.4.1
+- folium==0.16.0
+
+To setup lib, run command
+   python -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+
+
+First we need to create a map with osm. 
+1. Open the link https://www.openstreetmap.org/export#map=17/18.68012/105.66745
+2. Choose "Manually select a different area"
+3. Click Export
+4. Save file `.osm` and save in data folder
+
+Here I have data with 380 nodes and 810 edges in Ho Chi Minh city. 
+
+# How to run code
+
+Move to the folder having the project and run command
+  streamlit run app.py
+
+It will open the streamlit web app
+
+
