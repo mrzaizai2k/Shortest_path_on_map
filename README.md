@@ -54,7 +54,8 @@ Move to the folder having the project and run command
 
 It will open the streamlit web app
 
-![Result](docs/result b.jpg)
+<p align="center"><img src="docs/result b.jpg" width="700"></p>
+<p align="center"><i>Figure. Result</i></p>
 
 To change basemap click choose basemap. Options inculde:
 - Satellite
@@ -73,9 +74,10 @@ Click choose algorithm to change algorithms. Options include
 - Bellman-Ford
 - Floyd Warshall
 
-Then we click on the map, it will appear the lat, lon of the position, copy and paste the lat, lon to Go from and Go to section
+Then we click on the map, it will appear the lat, lon of the position, copy and paste them to Go from and Go to section
 
-
+<p align="center"><img src="docs/click to latlong.png" width="700"></p>
+<p align="center"><i>Figure. Click for lat long</i></p>
 
 
 
